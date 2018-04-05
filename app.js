@@ -69,4 +69,17 @@ server.on('listening', () => {
         ? `pipe ${addr}`
         : `port ${addr.port}`;
     console.log(`Listening on ${bind}`);
+
+    //test call creating user
+    f = {
+        username: 'ffff21',
+        password: 'password21',
+        first_name: 'fName',
+        last_name: 'lName',
+        role: 'user'
+    };
+
+    newuser = require('./api/user-api').createUser(f);
+
 });
+
